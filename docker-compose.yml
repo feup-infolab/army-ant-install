@@ -3,8 +3,6 @@ version: '3'
 services:
   mongo:
     image: mongo
-    #ports:
-      #- "27017:27017"
     networks:
       - army_ant
 
@@ -16,7 +14,7 @@ services:
       - army_ant
   
   army-ant:
-    image: jldevezas/army-ant:testing
+    image: jldevezas/army-ant:0.3-rc4.1
     ports:
       - "8080:8080"
     depends_on:
