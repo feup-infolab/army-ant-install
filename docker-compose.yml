@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    #ports:
+      #- "27017:27017"
+    networks:
+      - army_ant
+
+  mongo-data:
+    build: ./mongo-data
+    depends_on:
+      - mongo
+    networks:
+      - army_ant
+  
+  army-ant:
+    image: jldevezas/army-ant:testing
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    networks:
+      - army_ant
+
+networks:
+  army_ant: {}
