@@ -14,7 +14,7 @@ services:
       - army_ant
   
   army-ant:
-    image: jldevezas/army-ant:0.3-rc4.1
+    image: jldevezas/army-ant:latest
     ports:
       - "8080:8080"
     depends_on:
