@@ -20,10 +20,14 @@ $ docker-compose -p ijr2018 up
 
 This will launch a separate instance that, unless you call `docker-compose -p ijr2018 down`, you will be able to restore just like the default instance.
 
-Each Army ANT instance creates a volume that maps the local directory `collections` to `/opt/army-ant/collections/external`, enabling indexing operations to run inside the container. Please view [Army ANT Examples](https://github.com/feup-infolab/army-ant/blob/0.3/EXAMPLES.md) to learn the syntax. Any command within the container can be launched using:
+Each Army ANT instance creates a volume that maps the local directory `data` to `/army-ant/data` on the container, enabling indexing operations to run inside the container over a local collection. Please view [Army ANT Examples](https://github.com/feup-infolab/army-ant/blob/0.3/EXAMPLES.md) to learn the syntax. An `index` command for a collection in `data/inex-2009-52t-nl` can be launched within the container using:
 
 ```bash
-$ docker exec -i -t irj2018_army-ant_1 ./army-ant.py ...
+$ docker exec -i -t irj2018_army-ant_1 ./army-ant.py index \
+    --source-path /army-ant/data/inex-2009-52t-nl/corpus \
+    --source-reader inex_dir \
+    --index-location /opt/army-ant/data/inex-2099-52t-nl/lucene \
+    --index-type lucene
 ```
 
 Where `ijr2018` is the name of the project assigned with `docker-compose`.
