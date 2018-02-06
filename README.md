@@ -15,12 +15,20 @@ You might want to run different instances of Army ANT, for different projects. L
 You can do this by launching separate Army ANT instances, using:
 
 ```bash
-$ docker-compose -p sigir_2018 up
+$ docker-compose -p ijr2018 up
 ```
 
-This will launch a separate instance that, unless you call `docker-compose -p sigir_2018 down`, you will be able to restore just like the default instance.
+This will launch a separate instance that, unless you call `docker-compose -p ijr2018 down`, you will be able to restore just like the default instance.
 
-### Ideias on archival
+Each Army ANT instance creates a volume that maps the local directory `collections` to `/opt/army-ant/collections/external`, enabling indexing operations to run inside the container. Please view [Army ANT Examples](https://github.com/feup-infolab/army-ant/blob/0.3/EXAMPLES.md) to learn the syntax. Any command within the container can be launched using:
+
+```bash
+$ docker exec -i -t irj2018_army-ant_1 ./army-ant.py ...
+```
+
+Where `ijr2018` is the name of the project assigned with `docker-compose`.
+
+### Ideas on archival
 
 We are also considering a way to backup your session for archival, but this is something that might be hard to do, as we do not want backward compatibility to be a requirement in Army ANT, in order to avoid it becoming a stagnant project. Freedom to change code is essential in a set for innovation.
 

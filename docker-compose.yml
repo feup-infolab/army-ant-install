@@ -17,6 +17,8 @@ services:
     image: jldevezas/army-ant:latest
     ports:
       - "8080:8080"
+    volumes:
+      - ./data:/army-ant/data
     depends_on:
       - mongo
     networks:
