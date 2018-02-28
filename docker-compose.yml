@@ -18,7 +18,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./data:/army-ant/data
+      - ./data:/home/army-ant/data
     depends_on:
       - mongo
     networks:

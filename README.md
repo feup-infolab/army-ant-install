@@ -24,7 +24,7 @@ Each Army ANT instance creates a volume that maps the local directory `data` to 
 
 ```bash
 $ docker exec -i -t irj2018_army-ant_1 ./army-ant.py index \
-    --source-path /army-ant/data/inex-2009-52t-nl/corpus \
+    --source-path ~/data/inex-2009-52t-nl/corpus \
     --source-reader inex_dir \
     --index-location /opt/army-ant/data/inex-2099-52t-nl/lucene \
     --index-type lucene
