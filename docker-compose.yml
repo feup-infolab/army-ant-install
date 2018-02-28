@@ -19,6 +19,7 @@ services:
       - "8080:8080"
     volumes:
       - ./data:/home/army-ant/data
+      - ./config.yaml:/home/army-ant/config.yaml
     depends_on:
       - mongo
     networks:
