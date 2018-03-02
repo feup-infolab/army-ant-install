@@ -14,7 +14,7 @@ services:
       - army_ant
   
   army-ant:
-    image: jldevezas/army-ant:latest
+    image: jldevezas/army-ant:testing
     ports:
       - "8080:8080"
     volumes:
