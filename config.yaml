@@ -10,7 +10,7 @@ defaults:
         - MAP
         - NDCG@10
         - P@10
-    location: /opt/army-ant/eval
+    location: /home/army-ant/data/eval
   jvm:
     memory: 5120
 
@@ -21,7 +21,7 @@ engines:
       name: inex
     index:
       type: lucene
-      location: /opt/army-ant/data/inex-3t-nl/lucene
+      location: /home/army-ant/data/indexes/inex-3t-nl/lucene
     ranking:
       default:
         id: tf_idf
@@ -46,7 +46,7 @@ engines:
       name: inex
     index:
       type: hgoe
-      location: /opt/army-ant/data/inex-3t-nl/hgoe
+      location: /home/army-ant/data/indexes/inex-3t-nl/hgoe
       preload: true
     ranking:
       default:

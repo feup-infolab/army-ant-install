@@ -33,6 +33,3 @@ buildNumber.properties
 
 # Logs
 hs_err_*.log
-
-# Army ANT Install
-data/
