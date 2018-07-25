@@ -11,8 +11,14 @@ defaults:
         - NDCG@10
         - P@10
     location: /home/army-ant/data/eval
+  service:
+    ner:
+      entity_list: /opt/army-ant/gazetteers/all.txt
+  depend:
+    stanford-ner: /opt/stanford-ner-2015-12-09
   jvm:
     memory: 5120
+    other_args: -XX:+UseConcMarkSweepGC
 
 engines:
   lucene-inex-3t-nl:
@@ -52,11 +58,9 @@ engines:
       default:
         id: random_walk
         params:
-          l: 3
+          l: 2
           r: 10
       functions:
-        jaccard:
-          name: Jaccard Score
         random_walk:
           name: Random Walk Score
           params:

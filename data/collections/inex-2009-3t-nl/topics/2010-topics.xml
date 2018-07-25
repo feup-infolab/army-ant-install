@@ -1,0 +1,37 @@
+<!DOCTYPE inex-topic-file [
+<!ENTITY lt "lessthan">
+<!ENTITY gt "greaterthan">
+<!ENTITY amp "ampersand">
+<!ELEMENT inex-topic-file (topic)+>
+<!ELEMENT topic (title , castitle , phrasetitle , description , narrative)>
+<!ATTLIST topic id CDATA #REQUIRED>
+<!ATTLIST topic ct_no CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT castitle (#PCDATA)>
+<!ELEMENT phrasetitle (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT narrative (#PCDATA)>
+]>
+<inex-topic-file>
+<topic id="2010023" ct_no="339">
+  <title>retirement age</title>
+  <castitle>//*[about(., retirement age)]</castitle>
+  <phrasetitle>"retirement age"</phrasetitle>
+  <description>I'd like to know the retirement age all over the world</description>
+  <narrative>There will be soon a retirement reform in France, and the age of retirement will probably increase.  I'd like to know what is the retirement age in other countries. Is it the same for all people or does this age depend on the job ?  I'm also interested in the history of retirement. Since when is it possible in all countries ? How did the retirement age evolve in time ?    Information about how pensions are calculated is not relevant. Information about health and activities  of retired persons is also not relevant.</narrative>
+</topic>
+<topic id="2010070" ct_no="398">
+  <title>"tai chi" styles forms</title>
+  <castitle>//article[about(.//category, martial arts) AND about(., "tai chi" styles) AND about(.,"tai chi" forms)]</castitle>
+  <phrasetitle>"tai chi styles" "tai chi forms"</phrasetitle>
+  <description>Find information on the different tai chi styles and forms.</description>
+  <narrative>I am new to tai chi and, for my own interest, I would like to learn more about the different styles and forms used.    Relevant components are those that talk about any of the tai chi styles or any of the common forms used when practicing it. Also relevant are those components that discuss differences between styles. I am not interested in articles about tai chi masters or historical tai chi places. I am not interested in explanations about the tai chi movements neither.</narrative>
+</topic>
+<topic id="2010095" ct_no="425">
+  <title>Jazz "Charles Mingus" "Miles Davis" collaboration interaction personal relationship -album</title>
+  <castitle>//article[about(., Charles Mingus )]//sec[about(., Miles Davis ) and about(.,-album) and about(.,relation)]</castitle>
+  <phrasetitle>"Charles Mingus" "Miles Davis" "jazz collaboration" "personnal relation between Charles Mingus and Miles Davis"</phrasetitle>
+  <description>Find information about the musical and personnal relation between Charles Mangus and Miles Davis other than albums.</description>
+  <narrative>For my own personal interest, I would like to learn more background about the relationship between the two Jazz icons Charles Mingus and Miles Davis other that their common albums. I'm specially interested in the point of view of Charles Mingus about Miles Davis.</narrative>
+</topic>
+</inex-topic-file>
