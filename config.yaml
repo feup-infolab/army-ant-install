@@ -37,8 +37,8 @@ engines:
         bm25:
           name: BM25
           params:
-            k1: [1, 1.2, 1.8]
-            b: [0.5, 0.75, 1]
+            k1: [1.2, 1, 1.8]
+            b: [0.75, 0.5, 1]
         dfr:
           name: DFR
           params:
@@ -65,4 +65,4 @@ engines:
           name: Random Walk Score
           params:
             l: [1, 2, 3, 4, 5, 6]
-            r: [10, 100, 250, 500, 750, 1000]
+            r: [10, 25, 50, 100, 1000, 10000]
