@@ -1,7 +1,7 @@
 # How to install Army ANT using Docker Compose
 
 ```bash
-$ git clone git@github.com:feup-infolab/army-ant-install.git
+$ git clone https://github.com/feup-infolab/army-ant-install.git
 $ cd army-ant-install
 $ docker-compose up
 ```
