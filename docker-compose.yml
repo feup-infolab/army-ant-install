@@ -18,8 +18,8 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./data:/home/army-ant/data
-      - ./config.yaml:/home/army-ant/config.yaml
+      - ./data:/root/army-ant/data
+      - ./config.yaml:/root/army-ant/config.yaml
     depends_on:
       - mongo
     networks:
